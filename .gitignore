@@ -1,0 +1,49 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Windows system files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+
+# Linux system files
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*.bak
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Node modules (if using any JavaScript tools)
+node_modules/
+
+# Python virtual environments (if using any Python tools)
+venv/
+env/
+.env/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Build output
+dist/
+build/
+out/ 
