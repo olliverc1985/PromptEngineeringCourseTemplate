@@ -101,8 +101,10 @@ We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for 
 - For content questions, use the discussions section
 - For urgent matters, contact the course administrator
 
-## Licence
+## Licence and Attribution
 This course material is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+When using or adapting these materials, proper attribution is required. See [CITATION.md](CITATION.md) for detailed guidelines on how to cite and give credit for these materials.
 
 ## Note for Participants
 All examples are designed to work with Google Gemini and can be copied and pasted directly into your AI interface during the live sessions. Remember to save successful prompts and adaptations for future reference. 
