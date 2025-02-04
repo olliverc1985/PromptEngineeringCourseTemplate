@@ -58,7 +58,12 @@ At the end of each section, verify:
 
 ### Example 1: Definition and Importance
 ```
-Basic Prompt: "Write a story"
+Test Data:
+Sample Story for Improvement:
+"Once there was a penguin. He was shy. He met a polar bear. They became friends."
+
+Basic Prompt: 
+"Write a story"
 
 Enhanced Prompt: 
 "Write a 500-word children's story with these specifications:
@@ -72,20 +77,17 @@ Enhanced Prompt:
 - Reading level: Simple vocabulary with occasional challenging words"
 
 Why it works better: The enhanced prompt provides specific parameters that guide the AI to create content matching exact requirements.
-
-Test Data (for practice):
-Here's a sample story opening to improve:
-"Once there was a penguin. He was shy. He met a polar bear. They became friends."
 ```
 
 ### Example 2: Common Interpretation Patterns
 ```
-Basic Prompt: "Make this text better"
-
-Test Data (for improvement):
+Test Data:
 Original Business Text:
 "Our company sells food delivery services. We have an app. Customers can order food. 
 Restaurants can join our platform. We make money from commissions. We want to grow bigger."
+
+Basic Prompt: 
+"Make this text better"
 
 Enhanced Prompt:
 "Review and improve this business proposal text using:
@@ -107,9 +109,7 @@ Why it works better: The enhanced prompt provides clear improvement criteria and
 
 ### Example 3: Impact on Output Quality
 ```
-Basic Prompt: "Give me ideas for my coffee shop"
-
-Test Data (business context):
+Test Data:
 Coffee Shop Details:
 - Name: Bean Scene
 - Location: Manchester City Centre
@@ -119,6 +119,9 @@ Coffee Shop Details:
 - Staff: 6 part-time, 2 full-time
 - Current Marketing: Social media only
 - Competition: 5 chain cafes within 500m
+
+Basic Prompt: 
+"Give me ideas for my coffee shop"
 
 Enhanced Prompt:
 "Suggest 5 actionable marketing strategies for my independent coffee shop with these specific parameters:
@@ -143,10 +146,7 @@ Why it works better: The enhanced prompt provides specific context and requireme
 
 ### Example 1: Basic Command
 ```
-Basic Prompt:
-"Write a professional email to schedule a team meeting."
-
-Test Data (meeting context):
+Test Data:
 Team Information:
 - Department: Marketing
 - Team Size: 8 people
@@ -154,6 +154,9 @@ Team Information:
 - Available Meeting Rooms: Conference A (capacity 12), Conference B (capacity 8)
 - Working Hours: 9am-5pm GMT
 - Current Projects: Q1 Review, Q2 Planning, Brand Refresh
+
+Basic Prompt:
+"Write a professional email to schedule a team meeting."
 
 Enhanced Prompt:
 "Write a professional email to schedule a quarterly planning meeting with these specifications:
@@ -172,7 +175,7 @@ Enhanced Prompt:
 
 ### Example 1: Simple Question
 ```
-Test Data (marketing metrics):
+Test Data:
 Current Marketing Stats:
 Website Visits: 15,000/month
 Conversion Rate: 2.3%
@@ -285,7 +288,8 @@ Why it works: Breaks down the task into logical steps
 
 ### Exercise 1: Sales Analysis
 ```
-Test Data (sales_data.csv):
+Test Data:
+sales_data.csv:
 Date,Product,Units,Revenue,Cost
 2024-01-01,Coffee Beans,45,£225.00,£112.50
 2024-01-01,Pastries,78,£195.00,£58.50
@@ -296,16 +300,26 @@ Date,Product,Units,Revenue,Cost
 Basic Prompt:
 "Analyse this sales data"
 
-Your task: Create a detailed analysis prompt that includes:
-- Profitability analysis
-- Product performance comparison
-- Trend identification
-- Recommendations for inventory management
+Enhanced Prompt:
+"Analyse the provided sales data to:
+1. Calculate profit margins by product
+2. Identify best and worst performing products
+3. Spot sales trends across dates
+4. Suggest optimal inventory levels
+5. Recommend pricing adjustments
+
+Format the analysis as:
+- Executive Summary
+- Product Performance Analysis
+- Trend Analysis
+- Inventory Recommendations
+- Pricing Strategy"
 ```
 
 ### Exercise 2: Customer Service
 ```
-Test Data (customer_case.json):
+Test Data:
+customer_case.json:
 {
   "customer": {
     "type": "Premium subscription",
@@ -332,7 +346,22 @@ Test Data (customer_case.json):
 Basic Prompt:
 "Help resolve the customer's problem"
 
-Your task: Create a detailed support prompt incorporating all relevant data points.
+Enhanced Prompt:
+"Create a detailed support response for a premium customer experiencing mobile app login issues:
+
+1. Acknowledge the customer's status and issue
+2. Reference their specific device and app details
+3. Provide step-by-step troubleshooting instructions
+4. Include escalation options if needed
+5. Set clear expectations for resolution timeline
+
+Format the response with:
+- Personalised greeting
+- Issue acknowledgment
+- Troubleshooting steps
+- Alternative solutions
+- Follow-up plan
+- Contact information"
 ```
 
 ## Tips for Success
