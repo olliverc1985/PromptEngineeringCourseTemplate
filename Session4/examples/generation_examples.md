@@ -10,15 +10,15 @@ Each example in this course follows this structure:
    - Target audience (Technical professionals)
 
 2. Example Structure
+   - Test data
    - Basic version
    - Enhanced version
    - Why it works better
-   - Implementation notes
 
 3. Practice Format
-   - Beginner level task
-   - Intermediate level task
-   - Advanced level task
+   - Test scenarios
+   - Basic approach
+   - Enhanced approach
    - Solution guidelines
 
 4. Validation Criteria
@@ -60,534 +60,444 @@ At the end of each section, verify:
 - Basic coding knowledge
 - Familiarity with documentation standards
 
-## 1. Document Generation
+## 1. Document Generation Examples
 
-### Example: Technical Documentation Template
+### Example 1: Technical Documentation
 ```
-Context: Software feature documentation
-Prerequisites: Understanding of technical writing
-Target Audience: Development team and stakeholders
-
-Basic Version:
-"Write documentation for a new feature."
-
-Enhanced Version:
-Task: Generate a comprehensive technical documentation template
-Required Sections:
-1. Overview
-2. Technical Specifications
-3. Implementation Details
-4. API Documentation
-5. Usage Examples
-6. Troubleshooting Guide
-
-Why it works better:
-- Structured approach
-- Complete coverage
-- Clear hierarchy
-- Practical examples
-
-Implementation Notes:
-- Use consistent formatting
-- Include code examples
-- Add cross-references
-- Maintain version control
-```
-
-### Example: Business Report Structure
-```
-Task: Create a quarterly business report template.
-
-Structure:
-1. Executive Summary
-2. Financial Highlights
-3. Key Performance Indicators
-4. Market Analysis
-5. Strategic Initiatives
-6. Recommendations
-
-Include:
-- Data visualisation placeholders
-- Table formats for financial data
-- Standard chart templates
-- Appendix structure
-```
-
-## 2. Structured Data Generation
-
-### Example: Excel/CSV Data
-```
-Task: Generate a sales data structure for Q1 2024
-
-Required Fields:
-- Date (DD/MM/YYYY)
-- Product ID (PRDXXX)
-- Product Name
-- Category
-- Quantity Sold
-- Unit Price
-- Total Revenue
-- Region
-- Sales Representative
-
-Format:
-Date,Product_ID,Product_Name,Category,Quantity,Unit_Price,Total_Revenue,Region,Sales_Rep
-01/01/2024,PRD001,Widget A,Electronics,10,29.99,299.90,London,John Smith
-```
-
-### Example: JSON Structure
-```
-Task: Create a customer data structure in JSON
-
+Test Data:
+feature_spec.json:
 {
-  "customers": [
+  "feature": {
+    "name": "OAuth2 Authentication",
+    "version": "2.0.0",
+    "status": "In Development",
+    "target_release": "Q2 2024",
+    "components": [
+      {
+        "name": "Authentication Service",
+        "type": "Microservice",
+        "language": "Python 3.11",
+        "dependencies": [
+          "FastAPI 0.104.0",
+          "PyJWT 2.8.0",
+          "cryptography 41.0.0"
+        ]
+      },
+      {
+        "name": "User Management",
+        "type": "Database Service",
+        "technology": "PostgreSQL 15",
+        "schema_changes": [
+          "user_sessions table",
+          "oauth_tokens table",
+          "refresh_tokens table"
+        ]
+      }
+    ],
+    "api_endpoints": [
+      {
+        "path": "/auth/token",
+        "method": "POST",
+        "input": {
+          "username": "string",
+          "password": "string",
+          "grant_type": "string"
+        },
+        "output": {
+          "access_token": "string",
+          "token_type": "string",
+          "expires_in": "integer"
+        }
+      }
+    ],
+    "security": {
+      "encryption": "AES-256",
+      "token_lifetime": "1 hour",
+      "refresh_token_lifetime": "7 days",
+      "rate_limiting": "100 requests/minute"
+    }
+  }
+}
+
+Basic Prompt:
+"Write documentation for the OAuth2 feature."
+
+Enhanced Prompt:
+"Generate comprehensive technical documentation for the OAuth2 Authentication feature:
+
+1. Overview Section
+   - Feature summary
+   - Business justification
+   - Target users/systems
+   - Key benefits
+
+2. Technical Specifications
+   - Architecture diagram
+   - Component details
+   - Dependencies
+   - Security measures
+
+3. API Documentation
+   - Endpoint specifications
+   - Request/response formats
+   - Authentication flows
+   - Error handling
+
+4. Implementation Guide
+   - Setup requirements
+   - Configuration steps
+   - Database migrations
+   - Deployment process
+
+5. Testing Guidelines
+   - Unit test requirements
+   - Integration test scenarios
+   - Security test cases
+   - Performance benchmarks
+
+6. Operational Considerations
+   - Monitoring requirements
+   - Logging standards
+   - Backup procedures
+   - Disaster recovery
+
+Format Requirements:
+- Use Markdown format
+- Include code blocks
+- Add sequence diagrams
+- Provide example requests/responses
+- Include troubleshooting guide"
+
+Why it works better: Provides structured documentation with clear technical details and implementation guidance.
+```
+
+### Example 2: Data Report Generation
+```
+Test Data:
+sales_performance.json:
+{
+  "report_period": "Q4 2023",
+  "company": "TechRetail UK Ltd",
+  "financial_metrics": {
+    "total_revenue": "£2,450,000",
+    "yoy_growth": "+15.3%",
+    "profit_margin": "28.5%",
+    "operating_costs": "£1,750,000"
+  },
+  "sales_by_region": [
     {
-      "id": "CUS001",
-      "personal_info": {
-        "name": "Jane Smith",
-        "email": "jane.smith@email.com",
-        "phone": "+44 20 1234 5678"
+      "region": "London",
+      "revenue": "£980,000",
+      "growth": "+18.2%",
+      "top_product": "Smart Tablets"
+    },
+    {
+      "region": "Manchester",
+      "revenue": "£645,000",
+      "growth": "+12.5%",
+      "top_product": "Laptops"
+    },
+    {
+      "region": "Birmingham",
+      "revenue": "£525,000",
+      "growth": "+14.8%",
+      "top_product": "Smartphones"
+    }
+  ],
+  "product_performance": [
+    {
+      "category": "Electronics",
+      "revenue": "£1,225,000",
+      "margin": "32%",
+      "inventory_turns": 8.5
+    },
+    {
+      "category": "Accessories",
+      "revenue": "£735,000",
+      "margin": "45%",
+      "inventory_turns": 12.3
+    },
+    {
+      "category": "Services",
+      "revenue": "£490,000",
+      "margin": "65%",
+      "inventory_turns": null
+    }
+  ],
+  "key_metrics": {
+    "customer_satisfaction": 4.2,
+    "repeat_purchase_rate": "65%",
+    "average_order_value": "£285",
+    "new_customers": 1850
+  }
+}
+
+Basic Prompt:
+"Create a quarterly sales report."
+
+Enhanced Prompt:
+"Generate a comprehensive quarterly sales performance report using the provided data:
+
+1. Executive Summary
+   - Key performance highlights
+   - Strategic achievements
+   - Critical challenges
+   - Forward-looking statements
+
+2. Financial Performance
+   - Revenue analysis
+   - Profitability metrics
+   - Cost structure
+   - Year-over-year comparisons
+
+3. Regional Analysis
+   - Performance by region
+   - Growth trends
+   - Market penetration
+   - Regional highlights
+
+4. Product Performance
+   - Category analysis
+   - Margin analysis
+   - Inventory efficiency
+   - Product mix optimization
+
+5. Operational Metrics
+   - Customer metrics
+   - Operational efficiency
+   - Service levels
+   - Quality indicators
+
+Required Visualisations:
+1. Revenue Trend Charts
+2. Regional Performance Map
+3. Product Mix Pie Chart
+4. Margin Analysis Bar Chart
+5. KPI Dashboard
+
+Format Requirements:
+- Professional layout
+- Executive-friendly visuals
+- Clear data tables
+- Actionable insights
+- Strategic recommendations"
+
+Why it works better: Provides structured report generation with clear metrics and visualisation requirements.
+```
+
+### Example 3: Code Generation
+```
+Test Data:
+api_spec.json:
+{
+  "api": {
+    "name": "Product Catalogue API",
+    "version": "1.0.0",
+    "base_path": "/api/v1",
+    "endpoints": [
+      {
+        "path": "/products",
+        "method": "GET",
+        "parameters": {
+          "category": "string?",
+          "price_range": "string?",
+          "sort": "string?",
+          "page": "integer?",
+          "limit": "integer?"
+        },
+        "responses": {
+          "200": {
+            "data": "Product[]",
+            "pagination": "PaginationInfo"
+          }
+        }
       },
-      "address": {
-        "street": "123 High Street",
-        "city": "Manchester",
-        "postcode": "M1 1AA"
+      {
+        "path": "/products/{id}",
+        "method": "GET",
+        "parameters": {
+          "id": "string"
+        },
+        "responses": {
+          "200": "Product",
+          "404": "Error"
+        }
+      }
+    ],
+    "models": {
+      "Product": {
+        "id": "string",
+        "name": "string",
+        "description": "string",
+        "price": "decimal",
+        "category": "string",
+        "stock": "integer",
+        "created_at": "datetime"
       },
-      "preferences": {
-        "communication": "email",
-        "marketing_opt_in": true
+      "PaginationInfo": {
+        "total": "integer",
+        "page": "integer",
+        "limit": "integer",
+        "pages": "integer"
+      },
+      "Error": {
+        "code": "string",
+        "message": "string"
       }
     }
-  ]
+  }
 }
-```
 
-## 3. Code Generation Examples
+Basic Prompt:
+"Generate Python code for the product API."
 
-### Example: Python Script
-```
-Task: Generate a data processing script
+Enhanced Prompt:
+"Generate a FastAPI implementation for the Product Catalogue API with the following requirements:
 
-# Template for data processing script
-def process_sales_data(input_file: str, output_file: str) -> dict:
-    """
-    Process sales data from CSV and generate summary statistics.
-    
-    Args:
-        input_file (str): Path to input CSV file
-        output_file (str): Path to output CSV file
-    
-    Returns:
-        dict: Summary statistics
-    """
-    # Implementation details here
-    pass
+1. Core Implementation
+   - FastAPI router setup
+   - Pydantic models
+   - Database models
+   - CRUD operations
+   - Error handling
 
-def generate_report(data: dict) -> None:
-    """
-    Generate PDF report from processed data.
-    
-    Args:
-        data (dict): Processed data dictionary
-    """
-    # Implementation details here
-    pass
+2. Features
+   - Input validation
+   - Query parameter handling
+   - Pagination support
+   - Error responses
+   - Logging
 
-if __name__ == "__main__":
-    # Main execution logic
-    pass
-```
+3. Database Integration
+   - SQLAlchemy models
+   - Migration scripts
+   - Connection handling
+   - Query optimization
 
-### Example: SQL Query Generation
-```
-Task: Generate SQL queries for sales analysis
-
--- Template for sales analysis queries
--- 1. Monthly Sales Summary
-SELECT 
-    DATE_FORMAT(sale_date, '%Y-%m') as month,
-    COUNT(*) as total_transactions,
-    SUM(amount) as total_revenue,
-    AVG(amount) as average_sale
-FROM sales
-GROUP BY DATE_FORMAT(sale_date, '%Y-%m')
-ORDER BY month DESC;
-
--- 2. Top Products by Revenue
-SELECT 
-    p.product_name,
-    COUNT(*) as units_sold,
-    SUM(s.amount) as total_revenue
-FROM sales s
-JOIN products p ON s.product_id = p.id
-GROUP BY p.product_name
-ORDER BY total_revenue DESC
-LIMIT 10;
-```
-
-## 4. Practice Exercises
-
-### Exercise 1: Document Generation
-```
-Task: Create a project proposal template
-
-Requirements:
-1. Executive Summary section
-2. Project Scope section
-3. Timeline section
-4. Budget section
-5. Risk Assessment section
-6. Team Structure section
-
-Include prompts for:
-- Formatting guidelines
-- Section content requirements
-- Standard phrases and terminology
-- Required data tables
-```
-
-### Exercise 2: Data Structure Creation
-```
-Task: Design a product inventory system
-
-Create structures for:
-1. Product catalogue
-2. Inventory levels
-3. Supplier information
-4. Order tracking
-5. Price history
+4. Testing
+   - Unit tests
+   - Integration tests
+   - Mock data
+   - Test utilities
 
 Include:
-- Field definitions
-- Data validation rules
-- Relationship mappings
-- Sample data entries
+1. Type hints
+2. Docstrings
+3. Error handling
+4. Logging
+5. Configuration
+6. Performance optimizations
+
+Output Structure:
+/app
+  /models
+    - product.py
+    - database.py
+  /schemas
+    - product.py
+    - pagination.py
+  /routes
+    - products.py
+  /tests
+    - test_products.py
+  /utils
+    - logging.py
+    - pagination.py
+  config.py
+  main.py"
+
+Why it works better: Provides structured code generation with clear architecture and best practices.
 ```
 
-## 5. Quality Control and Evaluation
+## Practice Exercises
 
-### Document Quality Control
+### Exercise 1: API Documentation
 ```
-Task: Implement quality control for generated documents
-
-Checklist:
-1. Structure Validation
-   □ All required sections present
-   □ Correct heading hierarchy
-   □ Consistent formatting
-   □ Valid cross-references
-
-2. Content Quality
-   □ Grammar and spelling
-   □ Technical accuracy
-   □ Completeness of information
-   □ Consistency of terminology
-
-3. Format Compliance
-   □ Style guide adherence
-   □ Branding requirements
-   □ Accessibility standards
-   □ Document metadata
-```
-
-### XML Generation Example
-```
-Task: Create a product catalogue in XML
-
-<?xml version="1.0" encoding="UTF-8"?>
-<catalogue>
-    <category name="Electronics">
-        <product id="E001">
-            <name>Smart Watch Pro</name>
-            <description>Advanced fitness tracking smartwatch</description>
-            <specifications>
-                <battery>5 days</battery>
-                <waterproof>Yes</waterproof>
-                <connectivity>Bluetooth 5.0</connectivity>
-            </specifications>
-            <pricing>
-                <retail>199.99</retail>
-                <discount>179.99</discount>
-            </pricing>
-        </product>
-    </category>
-</catalogue>
-
-Validation Rules:
-- Required attributes: id, name
-- Valid price format: 2 decimal places
-- Non-empty description
-- Valid category assignment
-```
-
-### XML Schema Validation Example
-```
-Task: Create XML schema for product catalogue
-
-XML Schema:
-<?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="catalogue">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="category" maxOccurs="unbounded">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="product" maxOccurs="unbounded">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name="name" type="xs:string"/>
-                                        <xs:element name="description" type="xs:string"/>
-                                        <xs:element name="specifications">
-                                            <xs:complexType>
-                                                <xs:sequence>
-                                                    <xs:element name="battery" type="xs:string"/>
-                                                    <xs:element name="waterproof" type="xs:string"/>
-                                                    <xs:element name="connectivity" type="xs:string"/>
-                                                </xs:sequence>
-                                            </xs:complexType>
-                                        </xs:element>
-                                        <xs:element name="pricing">
-                                            <xs:complexType>
-                                                <xs:sequence>
-                                                    <xs:element name="retail" type="xs:decimal"/>
-                                                    <xs:element name="discount" type="xs:decimal"/>
-                                                </xs:sequence>
-                                            </xs:complexType>
-                                        </xs:element>
-                                    </xs:sequence>
-                                    <xs:attribute name="id" type="xs:string" use="required"/>
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:sequence>
-                        <xs:attribute name="name" type="xs:string" use="required"/>
-                    </xs:complexType>
-                </xs:element>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-</xs:schema>
-
-Validation Rules:
-1. Required Elements:
-   - Product must have name and description
-   - Pricing must include retail and discount
-   - All products must have specifications
-
-2. Data Types:
-   - Product ID: String (required)
-   - Prices: Decimal (positive numbers)
-   - Names: String (non-empty)
-
-3. Cardinality:
-   - Multiple products per category
-   - Multiple categories in catalogue
-   - One set of specifications per product
-```
-
-### Enhanced HTML/CSS Responsive Design
-```
-Task: Create a responsive product grid with modern features
-
-HTML Structure:
-```html
-<div class="product-grid">
-    <article class="product-card">
-        <div class="product-image">
-            <img src="[product-image]" alt="[product-name]" loading="lazy">
-            <div class="product-badges">
-                <span class="badge badge-sale">Sale</span>
-                <span class="badge badge-new">New</span>
-            </div>
-        </div>
-        <div class="product-content">
-            <h3 class="product-title">[Product Name]</h3>
-            <p class="product-description">[Short description]</p>
-            <div class="product-meta">
-                <div class="price-container">
-                    <span class="original-price">£99.99</span>
-                    <span class="sale-price">£79.99</span>
-                </div>
-                <div class="rating">
-                    <span class="stars">★★★★☆</span>
-                    <span class="count">(42)</span>
-                </div>
-            </div>
-            <div class="product-actions">
-                <button class="btn-primary">Add to Basket</button>
-                <button class="btn-secondary">Save for Later</button>
-            </div>
-        </div>
-    </article>
-</div>
-```
-
-Advanced CSS Styling:
-```css
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.product-card {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.product-image {
-    position: relative;
-    aspect-ratio: 16/9;
-    overflow: hidden;
-}
-
-.product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.product-card:hover .product-image img {
-    transform: scale(1.05);
-}
-
-.product-badges {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    display: flex;
-    gap: 0.5rem;
-}
-
-.badge {
-    padding: 0.25rem 0.75rem;
-    border-radius: 4px;
-    font-size: 0.875rem;
-    font-weight: 600;
-}
-
-.badge-sale {
-    background: #ff4444;
-    color: white;
-}
-
-.badge-new {
-    background: #00c853;
-    color: white;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 1rem;
-        padding: 1rem;
+Test Data:
+payment_api.json:
+{
+  "api": {
+    "name": "Payment Processing API",
+    "version": "2.0.0",
+    "endpoints": [
+      {
+        "path": "/payments",
+        "method": "POST",
+        "request": {
+          "amount": "decimal",
+          "currency": "string",
+          "payment_method": {
+            "type": "string",
+            "details": "object"
+          },
+          "customer_id": "string"
+        },
+        "response": {
+          "transaction_id": "string",
+          "status": "string",
+          "amount": "decimal",
+          "currency": "string",
+          "timestamp": "datetime"
+        }
+      }
+    ],
+    "security": {
+      "auth_type": "Bearer Token",
+      "rate_limit": "1000/hour",
+      "ip_whitelist": true
     }
+  }
 }
 
-@media (max-width: 480px) {
-    .product-actions {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-}
+Basic Prompt:
+"Write API documentation for the payment endpoint."
 
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-    .product-card {
-        background: #2a2a2a;
-        color: #ffffff;
-    }
-}
+Enhanced Prompt:
+"Create comprehensive API documentation for the Payment Processing API:
 
-/* Accessibility */
-.btn-primary:focus,
-.btn-secondary:focus {
-    outline: 2px solid #007bff;
-    outline-offset: 2px;
-}
+1. Overview
+   - API purpose
+   - Authentication
+   - Base URL
+   - Rate limits
 
-/* Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
-    .product-card,
-    .product-image img {
-        transition: none;
-    }
-}
-```
+2. Endpoint Documentation
+   - Request format
+   - Response format
+   - Error codes
+   - Examples
 
-Features:
-1. Responsive Grid Layout
-2. Lazy Loading Images
-3. Smooth Animations
-4. Dark Mode Support
-5. Accessibility Features
-6. Reduced Motion Support
-7. Modern CSS Grid
-8. Flexible Component Design
-
-### Solution Evaluation Framework
-```
-Task: Create evaluation criteria for generated solutions
-
-1. Technical Assessment
-   - Code quality metrics
-   - Performance benchmarks
+3. Security
+   - Authentication details
+   - Authorization process
+   - Best practices
    - Security considerations
-   - Scalability factors
 
-2. User Experience Evaluation
-   - Accessibility compliance
-   - Responsive design
-   - Load time optimization
-   - Interface usability
+4. Integration Guide
+   - Quick start
+   - Code examples
+   - Testing guide
+   - Troubleshooting
 
-3. Implementation Feasibility
-   - Resource requirements
-   - Technical dependencies
-   - Maintenance complexity
-   - Integration challenges
-
-4. Optimization Opportunities
-   - Performance improvements
-   - Code efficiency
-   - Resource utilization
-   - Caching strategies
-
-Example Scoring Matrix:
-| Criterion          | Weight | Score (1-5) | Weighted Score |
-|-------------------|--------|-------------|----------------|
-| Code Quality      | 0.25   | 4           | 1.00          |
-| Performance       | 0.20   | 3           | 0.60          |
-| Maintainability   | 0.15   | 4           | 0.60          |
-| Scalability       | 0.20   | 5           | 1.00          |
-| Security          | 0.20   | 4           | 0.80          |
-| Total             | 1.00   |             | 4.00          |
+Required Sections:
+1. API Reference
+2. Integration Guide
+3. Security Guide
+4. Example Collection
+5. Error Reference
+6. Best Practices"
 ```
 
-## Tips for Generation Tasks
-- Always specify format requirements
-- Include validation criteria
-- Define clear structure
-- Provide example outputs
-- Specify error handling
-- Include documentation requirements
+## Tips for Generation
+- Use structured templates
+- Include validation rules
+- Implement error handling
+- Follow style guides
+- Document assumptions
 
-## Common Generation Mistakes to Avoid
+## Common Generation Mistakes
 - Inconsistent formatting
-- Missing validation rules
-- Incomplete structure definitions
-- Ambiguous requirements
-- Lack of error handling
-- Poor documentation
-- Inconsistent naming conventions 
+- Missing error cases
+- Incomplete documentation
+- Poor code structure
+- Insufficient examples 
