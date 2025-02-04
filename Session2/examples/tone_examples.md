@@ -1,6 +1,96 @@
 # Session 2: Tone and Content Manipulation Examples
 
+## Standard Format Guidelines
+```
+Each example in this course follows this structure:
+
+1. Context
+   - Background information
+   - Prerequisites (Session 1 completion)
+   - Target audience (Business professionals)
+
+2. Example Structure
+   - Basic version
+   - Enhanced version
+   - Why it works better
+   - Implementation notes
+
+3. Practice Format
+   - Beginner level task
+   - Intermediate level task
+   - Advanced level task
+   - Solution guidelines
+
+4. Validation Criteria
+   - Success metrics
+   - Common pitfalls
+   - Testing approach
+   - Quality checklist
+
+5. Documentation Requirements
+   - Implementation notes
+   - Communication guidelines
+   - Tone considerations
+   - Cultural sensitivity
+```
+
+## Review Checkpoints
+At the end of each section, verify:
+1. Understanding
+   □ Tone variations mastered
+   □ Examples contextually appropriate
+   □ Practice exercises completed
+   □ Cultural considerations understood
+
+2. Implementation
+   □ Tone consistency checked
+   □ Cultural sensitivity verified
+   □ Department adaptations tested
+   □ Communication effective
+
+3. Documentation
+   □ Style guides referenced
+   □ Tone guidelines documented
+   □ Adaptations recorded
+   □ Updates tracked
+
+## Prerequisites
+- Completion of Session 1
+- Understanding of basic prompt structures
+- Familiarity with business communication
+- Basic knowledge of professional writing
+
 ## 1. Tone Variation Examples
+
+### Example: Announcing a Company Policy Change
+```
+Context: Communicating hybrid work policy across different levels
+Prerequisites: Understanding of corporate communication
+Target Audience: Multiple organisational levels
+
+Basic Version:
+"We're changing to hybrid work."
+
+Enhanced Version (Executive Level):
+Task: Write a brief announcement about the implementation of a new hybrid work policy
+Considerations:
+- Strategic benefits
+- Business impact
+- Implementation timeline
+- Success metrics
+
+Why it works better:
+- Maintains executive perspective
+- Focuses on strategic elements
+- Addresses stakeholder concerns
+- Provides clear metrics
+
+Implementation Notes:
+- Use data-driven justification
+- Include cost-benefit analysis
+- Reference industry trends
+- Provide clear next steps
+```
 
 ### Base Scenario: Announcing a Company Policy Change
 Let's see how to adjust the tone for different audiences while maintaining the same core message.
@@ -26,7 +116,61 @@ Task: Write a team email about the new hybrid work policy, focusing on practical
 Tone: Collaborative, practical, direct
 ```
 
-## 2. Content Specificity Examples
+## 2. Emotional vs Neutral Language Examples
+
+### Customer Feedback Response
+```
+Neutral Version:
+"We have received your feedback about our service. We are reviewing the situation and will make necessary adjustments to our processes."
+
+Empathetic Version:
+"Thank you for taking the time to share your experience with us. We understand your frustration with the service delay, and we genuinely appreciate your patience. We're actively working to improve our processes."
+```
+
+### Project Delay Announcement
+```
+Neutral Version:
+"The project deadline has been extended to 15th March due to technical requirements."
+
+Emotional Intelligence Version:
+"We understand the impact that project timelines have on your work. While we need to extend the deadline to 15th March to ensure quality, we're here to support you through this adjustment and welcome your questions."
+```
+
+## 3. Cultural Considerations in Practice
+
+### International Team Communication
+```
+Western Context:
+"Please provide direct feedback on the proposal by Friday."
+
+Asian Context (Considering indirect communication preferences):
+"We would value your thoughts on the proposal. When convenient for you, perhaps before Friday, could you share any insights that might help enhance the document?"
+```
+
+### Meeting Scheduling
+```
+Standard Version:
+"Let's schedule the meeting for 9 AM sharp. Please be on time."
+
+Culturally Aware Version:
+"I suggest we meet at 9 AM UK time (please see time zone converter link). We understand this might fall during different parts of the day for team members globally - please let us know if we need to find an alternative time."
+```
+
+## 4. Expertise Level Adaptation
+
+### Technical Update Announcement
+```
+Expert Level (Development Team):
+"We're implementing OAuth 2.0 with JWT tokens for authentication, replacing the legacy basic auth system. Update your API clients to include Bearer tokens in request headers."
+
+Intermediate Level (IT Support):
+"We're upgrading our authentication system to use secure tokens instead of username/password combinations. You'll need to update how you connect to the system using the new security certificates provided."
+
+Basic Level (General Staff):
+"We're making our login system more secure. The only change you'll notice is a new login screen where you'll use your company email to sign in. No action is needed from you until the switch next week."
+```
+
+## 5. Content Specificity Examples
 
 ### Technical vs Non-Technical Communication
 
@@ -44,7 +188,7 @@ Task: Explain the same security protocols in user-friendly terms, focusing on da
 Requirements: Use analogies, simple explanations, and practical examples
 ```
 
-## 3. Department-Specific Adaptations
+## 6. Department-Specific Adaptations
 
 ### Marketing Department
 ```
@@ -70,7 +214,7 @@ Style: Empathetic, solution-oriented, clear
 Task: Create response templates for common customer queries that maintain a consistent, helpful tone.
 ```
 
-## 4. Practice Exercises
+## 7. Practice Exercises
 
 ### Exercise 1: Tone Transformation
 Take this neutral message:

@@ -1,24 +1,102 @@
 # Session 3: Advanced Prompt Techniques Examples
 
+## Standard Format Guidelines
+```
+Each example in this course follows this structure:
+
+1. Context
+   - Background information
+   - Prerequisites (Sessions 1-2 completion)
+   - Target audience (Advanced business users)
+
+2. Example Structure
+   - Basic version
+   - Enhanced version
+   - Why it works better
+   - Implementation notes
+
+3. Practice Format
+   - Beginner level task
+   - Intermediate level task
+   - Advanced level task
+   - Solution guidelines
+
+4. Validation Criteria
+   - Success metrics
+   - Common pitfalls
+   - Testing approach
+   - Quality checklist
+
+5. Documentation Requirements
+   - Implementation notes
+   - Technical considerations
+   - Error handling
+   - Performance optimisation
+```
+
+## Review Checkpoints
+At the end of each section, verify:
+1. Understanding
+   □ Complex query handling mastered
+   □ Chain of thought implemented
+   □ Self-reflection mechanisms used
+   □ Error handling understood
+
+2. Implementation
+   □ Query decomposition tested
+   □ Validation steps implemented
+   □ Error handling robust
+   □ Performance optimised
+
+3. Documentation
+   □ Process flows documented
+   □ Error scenarios recorded
+   □ Improvements tracked
+   □ Updates logged
+
+## Prerequisites
+- Completion of Sessions 1-2
+- Understanding of tone manipulation
+- Experience with basic prompting
+- Familiarity with business scenarios
+
 ## 1. Complex Query Handling
 
 ### Example: Market Analysis Report
 ```
-Context: You are a business analyst preparing a comprehensive market analysis.
-Task: Break down this complex query into manageable steps:
-"Analyse the UK electric vehicle market trends for the past 5 years, predict growth for the next 3 years, and recommend market entry strategies for a new manufacturer."
+Context: Business analysis for market expansion
+Prerequisites: Understanding of market research principles
+Target Audience: Business analysts and strategists
 
-Step 1: Historical Analysis
-{First, analyse historical data and identify key trends}
+Basic Version:
+"Analyse the UK electric vehicle market."
 
-Step 2: Growth Prediction
-{Based on Step 1, create growth projections}
+Enhanced Version:
+Task: Break down complex market analysis into manageable steps
+Components:
+1. Historical Analysis
+   - Market share trends
+   - Competitor movements
+   - Consumer behaviour patterns
+   - Regulatory changes
 
-Step 3: Strategy Development
-{Using insights from Steps 1 and 2, develop entry strategies}
+2. Growth Prediction
+   - Data-driven projections
+   - Market indicators
+   - External factors
+   - Risk assessment
 
-Step 4: Final Integration
-{Combine all analyses into a cohesive recommendation}
+Why it works better:
+- Structured approach
+- Clear methodology
+- Measurable outcomes
+- Comprehensive coverage
+
+Implementation Notes:
+- Use reliable data sources
+- Include market benchmarks
+- Consider regional variations
+- Document assumptions
 ```
 
 ## 2. Chain of Thought (CoT) Prompting
@@ -135,16 +213,42 @@ Task: Generate multiple solutions and cross-validate
 Prompt: "Generate three different approaches to [problem]. Then, analyse the consistency and effectiveness of each approach, identifying the strongest elements from each to create an optimal solution."
 ```
 
-## Tips for Advanced Prompting
-- Always break complex tasks into clear steps
-- Include reasoning requirements in prompts
-- Request explicit explanations
-- Build in validation mechanisms
-- Use iterative improvement cycles
+### Error Handling and Validation
+```
+Context: Processing user data input
+Task: Create a robust prompt that handles various error scenarios
 
-## Common Advanced Prompting Mistakes
-- Overcomplicating simple tasks
-- Skipping validation steps
-- Insufficient context in complex queries
-- Neglecting to specify output format
-- Failing to include self-reflection mechanisms 
+Step 1: Input Validation
+"Before processing the [data type], verify:
+- Required fields are present
+- Data formats are correct
+- Values are within acceptable ranges
+If any checks fail, specify which validation failed and why."
+
+Step 2: Error Response Generation
+"For each validation error:
+1. Create user-friendly error message
+2. Provide specific correction guidance
+3. Maintain audit trail of issues
+4. Suggest valid alternatives"
+
+Example Implementation:
+```
+Input: Process customer order
+Validation Checks:
+- Email format ✓
+- Delivery address ✗ (Postcode missing)
+- Payment details ✓
+- Order quantity ✗ (Exceeds stock)
+
+Response:
+"We noticed two items that need attention:
+1. Please add your postcode to complete the delivery address
+2. The requested quantity (50) exceeds our stock (30). Would you like to:
+   - Order the available 30 units
+   - Split into multiple deliveries
+   - Receive notification when stock is replenished"
+```
+
+### Interactive Refinement Process
+```

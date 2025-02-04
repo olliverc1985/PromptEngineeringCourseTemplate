@@ -1,9 +1,104 @@
 # Session 5: Multi-step Reasoning and Self-Correction Examples
 
+## Standard Format Guidelines
+```
+Each example in this course follows this structure:
+
+1. Context
+   - Background information
+   - Prerequisites (Sessions 1-4 completion)
+   - Target audience (Advanced problem solvers)
+
+2. Example Structure
+   - Basic version
+   - Enhanced version
+   - Why it works better
+   - Implementation notes
+
+3. Practice Format
+   - Beginner level task
+   - Intermediate level task
+   - Advanced level task
+   - Solution guidelines
+
+4. Validation Criteria
+   - Success metrics
+   - Common pitfalls
+   - Testing approach
+   - Quality checklist
+
+5. Documentation Requirements
+   - Implementation notes
+   - Reasoning methodology
+   - Validation steps
+   - Improvement cycles
+```
+
+## Review Checkpoints
+At the end of each section, verify:
+1. Understanding
+   □ Multi-step reasoning mastered
+   □ Self-correction implemented
+   □ Strategic thinking demonstrated
+   □ Complex problems decomposed
+
+2. Implementation
+   □ Reasoning steps documented
+   □ Validation methods applied
+   □ Solutions optimised
+   □ Improvements tracked
+
+3. Documentation
+   □ Methodology documented
+   □ Decision points recorded
+   □ Improvements logged
+   □ Updates tracked
+
+## Prerequisites
+- Completion of Sessions 1-4
+- Advanced problem-solving skills
+- Experience with complex scenarios
+- Understanding of validation methods
+
 ## 1. Multi-step Reasoning Examples
 
 ### Example: Business Strategy Development
 ```
+Context: Market expansion strategy development
+Prerequisites: Business analysis experience
+Target Audience: Strategic planners and analysts
+
+Basic Version:
+"Create a business strategy."
+
+Enhanced Version:
+Task: Develop a comprehensive market expansion strategy
+Components:
+1. Market Analysis
+   - Current position assessment
+   - Competitor analysis
+   - Market trends evaluation
+   - Growth potential calculation
+
+2. Strategy Formation
+   - Entry approach
+   - Resource allocation
+   - Timeline development
+   - Risk assessment
+
+Why it works better:
+- Systematic approach
+- Clear progression
+- Measurable outcomes
+- Comprehensive coverage
+
+Implementation Notes:
+- Use data-driven decisions
+- Document assumptions
+- Include validation steps
+- Plan for contingencies
+```
+
 Task: Develop a market expansion strategy for a UK-based e-commerce company
 
 Step 1: Market Analysis
@@ -37,7 +132,6 @@ Prompt: "For the proposed strategy:
 - Suggest mitigation measures
 - Create contingency plans
 Detail your reasoning for each assessment."
-```
 
 ## 2. Self-Correction Mechanisms
 
@@ -112,6 +206,151 @@ Prompt: "For the chosen solution:
 - Define success criteria
 - Plan testing approach
 - Develop rollback procedures"
+```
+
+### Example: Decision Tree Analysis
+```
+Task: Create a decision tree for product launch strategy
+
+Decision Tree Structure:
+[Market Research]
+├── Positive Market Response
+│   ├── High Competition
+│   │   ├── Differentiation Strategy
+│   │   │   ├── Success: Premium Pricing
+│   │   │   └── Failure: Revise USP
+│   │   └── Cost Leadership Strategy
+│   │       ├── Success: Market Share Growth
+│   │       └── Failure: Resource Drain
+│   └── Low Competition
+│       ├── Rapid Expansion
+│       │   ├── Success: Market Dominance
+│       │   └── Failure: Over-extension
+│       └── Gradual Growth
+│           ├── Success: Stable Position
+│           └── Failure: Missed Opportunity
+└── Negative Market Response
+    ├── Pivot Product
+    │   ├── Success: New Market Fit
+    │   └── Failure: Resource Waste
+    └── Abandon Project
+        ├── Success: Resource Preservation
+        └── Failure: Sunk Costs
+
+Decision Points and Criteria:
+1. Market Research Results
+   - Positive: >70% favourable feedback
+   - Negative: <30% favourable feedback
+
+2. Competition Level
+   - High: >5 major competitors
+   - Low: <2 major competitors
+
+3. Strategy Selection
+   - Based on resource availability
+   - Consider time constraints
+```
+
+### Department-Specific Applications
+
+#### HR Department Example
+```
+Task: Develop a hiring decision process
+
+Step 1: Requirements Analysis
+- Department needs assessment
+- Budget considerations
+- Skills gap analysis
+- Timeline requirements
+
+Step 2: Recruitment Strategy
+Decision Tree:
+[Urgent Need]
+├── Internal Recruitment
+│   ├── Available Talent
+│   │   └── Internal Promotion
+│   └── No Suitable Candidates
+│       └── External Recruitment
+└── External Recruitment
+    ├── Agency Hiring
+    │   ├── Quick Results
+    │   └── Higher Costs
+    └── Direct Hiring
+        ├── Longer Timeline
+        └── Cost Effective
+
+Step 3: Implementation
+- Process documentation
+- Stakeholder communication
+- Timeline management
+- Success metrics
+```
+
+#### Finance Department Example
+```
+Task: Investment decision-making process
+
+Step 1: Investment Analysis
+Criteria Matrix:
+| Factor          | Weight | Score | Weighted |
+|-----------------|--------|-------|----------|
+| ROI Potential   | 0.30   | 4     | 1.20     |
+| Risk Level      | 0.25   | 3     | 0.75     |
+| Market Trends   | 0.20   | 5     | 1.00     |
+| Resource Req.   | 0.15   | 4     | 0.60     |
+| Timeline        | 0.10   | 3     | 0.30     |
+| Total           | 1.00   |       | 3.85     |
+
+Step 2: Decision Tree
+[Investment Opportunity]
+├── High Score (>4.0)
+│   ├── Full Investment
+│   └── Phased Investment
+└── Medium Score (3.0-4.0)
+    ├── Pilot Investment
+    └── Further Research
+```
+
+#### IT Department Example
+```
+Task: System upgrade decision process
+
+Step 1: Impact Assessment
+- Current system analysis
+- User requirements
+- Resource implications
+- Security considerations
+
+Step 2: Implementation Strategy
+Decision Matrix:
+1. Immediate Upgrade
+   Criteria:
+   - Critical security issues
+   - System performance <60%
+   - High user impact
+
+2. Phased Upgrade
+   Criteria:
+   - Moderate issues
+   - System performance 60-80%
+   - Medium user impact
+
+3. Scheduled Maintenance
+   Criteria:
+   - Minor issues
+   - System performance >80%
+   - Low user impact
+
+Step 3: Execution Plan
+[System Status]
+├── Critical Issues
+│   ├── Emergency Upgrade
+│   │   ├── Full System
+│   │   └── Affected Modules
+│   └── Temporary Fix
+└── Non-Critical Issues
+    ├── Planned Upgrade
+    └── Regular Maintenance
 ```
 
 ## 4. Practice Exercises
