@@ -10,15 +10,15 @@ Each example in this course follows this structure:
    - Target audience (Advanced problem solvers)
 
 2. Example Structure
+   - Test data
    - Basic version
    - Enhanced version
    - Why it works better
-   - Implementation notes
 
 3. Practice Format
-   - Beginner level task
-   - Intermediate level task
-   - Advanced level task
+   - Test scenarios
+   - Basic approach
+   - Enhanced approach
    - Solution guidelines
 
 4. Validation Criteria
@@ -60,377 +60,508 @@ At the end of each section, verify:
 - Experience with complex scenarios
 - Understanding of validation methods
 
-## 1. Multi-step Reasoning Examples
+## 1. Strategic Reasoning Examples
 
-### Example: Business Strategy Development
+### Example 1: Market Expansion Analysis
 ```
-Context: Market expansion strategy development
-Prerequisites: Business analysis experience
-Target Audience: Strategic planners and analysts
+Test Data:
+market_expansion.json:
+{
+  "company": {
+    "name": "TechRetail Plus",
+    "sector": "E-commerce",
+    "current_markets": {
+      "primary": {
+        "region": "London & South East",
+        "revenue": "£45M",
+        "market_share": "12%",
+        "growth_rate": "15%",
+        "customer_base": 125000
+      },
+      "secondary": {
+        "region": "Manchester & North West",
+        "revenue": "£15M",
+        "market_share": "5%",
+        "growth_rate": "25%",
+        "customer_base": 42000
+      }
+    },
+    "financials": {
+      "annual_revenue": "£60M",
+      "profit_margin": "18%",
+      "cash_reserves": "£8M",
+      "investment_budget": "£5M"
+    },
+    "capabilities": {
+      "logistics_centres": 2,
+      "delivery_fleet": 45,
+      "tech_platform": "Custom E-commerce",
+      "staff": 180
+    }
+  },
+  "target_markets": [
+    {
+      "region": "Birmingham & Midlands",
+      "market_size": "£850M",
+      "growth_rate": "12%",
+      "competition": {
+        "major_players": 3,
+        "market_leader_share": "28%",
+        "barriers_to_entry": "Medium"
+      },
+      "demographics": {
+        "population": 5200000,
+        "average_income": "£32,000",
+        "e_commerce_adoption": "72%"
+      },
+      "infrastructure": {
+        "logistics_cost": "£2.5M",
+        "setup_time": "6 months",
+        "regulatory_requirements": "Standard UK"
+      }
+    },
+    {
+      "region": "Scotland",
+      "market_size": "£720M",
+      "growth_rate": "14%",
+      "competition": {
+        "major_players": 2,
+        "market_leader_share": "35%",
+        "barriers_to_entry": "High"
+      },
+      "demographics": {
+        "population": 4500000,
+        "average_income": "£31,000",
+        "e_commerce_adoption": "68%"
+      },
+      "infrastructure": {
+        "logistics_cost": "£3.2M",
+        "setup_time": "8 months",
+        "regulatory_requirements": "Scotland-specific"
+      }
+    }
+  ]
+}
 
-Basic Version:
-"Create a business strategy."
+Basic Prompt:
+"Analyse which market we should expand into."
 
-Enhanced Version:
-Task: Develop a comprehensive market expansion strategy
-Components:
-1. Market Analysis
-   - Current position assessment
-   - Competitor analysis
-   - Market trends evaluation
-   - Growth potential calculation
+Enhanced Prompt:
+"Develop a comprehensive market expansion analysis using the provided data:
 
-2. Strategy Formation
-   - Entry approach
-   - Resource allocation
-   - Timeline development
-   - Risk assessment
+1. Current Position Assessment
+   - Market share analysis
+   - Financial capability review
+   - Operational capacity evaluation
+   - Core competencies identification
 
-Why it works better:
-- Systematic approach
-- Clear progression
-- Measurable outcomes
-- Comprehensive coverage
+2. Target Market Analysis
+   - Market size comparison
+   - Growth potential assessment
+   - Competition analysis
+   - Entry barrier evaluation
 
-Implementation Notes:
-- Use data-driven decisions
-- Document assumptions
-- Include validation steps
-- Plan for contingencies
+3. Resource Requirements
+   - Infrastructure needs
+   - Financial investment
+   - Timeline estimation
+   - Staffing requirements
+
+4. Risk Assessment
+   - Market risks
+   - Operational risks
+   - Financial risks
+   - Regulatory risks
+
+5. ROI Projection
+   - Revenue potential
+   - Cost structure
+   - Break-even analysis
+   - Growth trajectory
+
+Required Outputs:
+1. Market Comparison Matrix
+2. Resource Requirement Plan
+3. Risk Assessment Dashboard
+4. Financial Projections
+5. Implementation Timeline
+6. Go/No-Go Recommendation
+
+Decision Criteria:
+- Market potential vs. Investment required
+- Operational feasibility
+- Risk level
+- Expected ROI
+- Strategic fit"
+
+Why it works better: Provides structured analysis framework with clear decision criteria and measurable outcomes.
 ```
 
-Task: Develop a market expansion strategy for a UK-based e-commerce company
-
-Step 1: Market Analysis
-Prompt: "Analyse the current market position:
-- Current market share
-- Competitor landscape
-- Market trends
-- Customer demographics
-Provide detailed analysis for each point."
-
-Step 2: Opportunity Identification
-Prompt: "Based on the market analysis:
-- Identify potential growth markets
-- Analyse entry barriers
-- Evaluate resource requirements
-- Calculate potential ROI
-Show your reasoning for each conclusion."
-
-Step 3: Strategy Formation
-Prompt: "Using the opportunities identified:
-- Develop specific entry strategies
-- Create timeline for implementation
-- Outline resource allocation
-- Define success metrics
-Explain the logic behind each decision."
-
-Step 4: Risk Assessment
-Prompt: "For the proposed strategy:
-- Identify potential risks
-- Evaluate impact severity
-- Suggest mitigation measures
-- Create contingency plans
-Detail your reasoning for each assessment."
-
-## 2. Self-Correction Mechanisms
-
-### Example: Project Plan Review
+### Example 2: Technical Problem Resolution
 ```
-Task: Review and improve a project implementation plan
+Test Data:
+system_issue.json:
+{
+  "incident": {
+    "id": "INC-2024-1234",
+    "type": "Performance Degradation",
+    "status": "Critical",
+    "duration": "72 hours",
+    "impact": {
+      "users_affected": 15000,
+      "revenue_loss": "£25,000/hour",
+      "services_impacted": [
+        "Checkout Process",
+        "Order Management",
+        "Inventory Updates"
+      ]
+    }
+  },
+  "system_metrics": {
+    "response_times": {
+      "checkout": {
+        "normal": "0.8s",
+        "current": "4.5s",
+        "threshold": "2.0s"
+      },
+      "order_processing": {
+        "normal": "1.2s",
+        "current": "6.8s",
+        "threshold": "3.0s"
+      }
+    },
+    "error_rates": {
+      "api_failures": "12%",
+      "database_timeouts": "8%",
+      "payment_declines": "15%"
+    },
+    "resource_utilization": {
+      "cpu": "92%",
+      "memory": "87%",
+      "disk_io": "95%",
+      "network": "65%"
+    }
+  },
+  "recent_changes": [
+    {
+      "type": "Deployment",
+      "component": "Payment Gateway",
+      "date": "2024-01-15",
+      "details": "Version 2.5.0 upgrade"
+    },
+    {
+      "type": "Database",
+      "component": "Order Management",
+      "date": "2024-01-14",
+      "details": "Schema optimization"
+    },
+    {
+      "type": "Infrastructure",
+      "component": "Load Balancer",
+      "date": "2024-01-13",
+      "details": "Configuration update"
+    }
+  ],
+  "monitoring_data": {
+    "logs": [
+      {
+        "timestamp": "2024-01-15T10:00:00Z",
+        "component": "Payment Gateway",
+        "message": "Connection pool exhausted"
+      },
+      {
+        "timestamp": "2024-01-15T10:01:00Z",
+        "component": "Database",
+        "message": "Deadlock detected"
+      }
+    ],
+    "alerts": [
+      {
+        "type": "High CPU Usage",
+        "frequency": "Every 5 minutes",
+        "duration": "48 hours"
+      },
+      {
+        "type": "Database Connections",
+        "frequency": "Every 2 minutes",
+        "duration": "72 hours"
+      }
+    ]
+  }
+}
 
-Initial Assessment:
-"Review the following project plan for completeness and effectiveness:
-[Project Plan Details]
+Basic Prompt:
+"Fix the system performance issue."
 
-Evaluation Criteria:
-1. Timeline feasibility
-2. Resource allocation
-3. Risk management
-4. Stakeholder consideration
-5. Success metrics"
+Enhanced Prompt:
+"Analyse and resolve the critical system performance degradation using the provided data:
 
-Self-Correction Loop:
-Step 1: Initial Review
-- Identify gaps and inconsistencies
-- Mark areas needing improvement
-- Note unclear elements
-
-Step 2: Improvement Suggestions
-- Propose specific enhancements
-- Justify each suggestion
-- Consider implementation impact
-
-Step 3: Validation
-- Check against best practices
-- Verify timeline feasibility
-- Confirm resource availability
-
-Step 4: Final Review
-- Assess improvements
-- Verify completeness
-- Ensure clarity and coherence
-```
-
-## 3. Complex Problem-Solving Examples
-
-### Example: Technical Issue Resolution
-```
-Task: Resolve a complex system performance issue
-
-Structured Approach:
-1. Problem Definition
-Prompt: "Define the exact symptoms and impact:
-- What are the specific performance issues?
-- When do they occur?
-- Who is affected?
-- What is the business impact?"
+1. Impact Assessment
+   - Calculate business impact
+   - Identify affected systems
+   - Quantify user impact
+   - Determine priority level
 
 2. Root Cause Analysis
-Prompt: "Analyse potential causes:
-- System logs review
-- Performance metrics analysis
-- User behaviour patterns
-- System architecture review"
+   - Analyse system metrics
+   - Review recent changes
+   - Examine error patterns
+   - Correlate events
 
 3. Solution Development
-Prompt: "Based on the analysis:
-- Propose potential solutions
-- Evaluate each solution's impact
-- Consider implementation requirements
-- Assess risks and benefits"
+   - Identify potential fixes
+   - Evaluate solution impact
+   - Consider dependencies
+   - Assess implementation risks
 
-4. Implementation Planning
-Prompt: "For the chosen solution:
-- Create detailed implementation steps
-- Define success criteria
-- Plan testing approach
-- Develop rollback procedures"
+4. Implementation Plan
+   - Define resolution steps
+   - Create timeline
+   - Identify resources needed
+   - Plan verification tests
+
+5. Prevention Strategy
+   - Identify systemic issues
+   - Recommend improvements
+   - Define monitoring needs
+   - Update procedures
+
+Required Deliverables:
+1. Incident Analysis Report
+2. Root Cause Findings
+3. Solution Recommendation
+4. Implementation Plan
+5. Verification Steps
+6. Future Prevention Measures
+
+Success Criteria:
+- Response times within thresholds
+- Error rates below 1%
+- Resource utilization under 70%
+- No recurring incidents"
+
+Why it works better: Provides structured problem-solving approach with clear metrics and success criteria.
 ```
 
-### Example: Decision Tree Analysis
+### Example 3: Decision Analysis
 ```
-Task: Create a decision tree for product launch strategy
+Test Data:
+product_decision.json:
+{
+  "product": {
+    "name": "Smart Home Hub Pro",
+    "status": "Development Complete",
+    "investment": "£2.5M",
+    "target_launch": "Q2 2024",
+    "features": [
+      {
+        "name": "Energy Management",
+        "development_cost": "£800,000",
+        "market_demand": "High",
+        "competitor_parity": true
+      },
+      {
+        "name": "AI Assistant",
+        "development_cost": "£1,200,000",
+        "market_demand": "Medium",
+        "competitor_parity": false
+      },
+      {
+        "name": "Security Suite",
+        "development_cost": "£500,000",
+        "market_demand": "High",
+        "competitor_parity": true
+      }
+    ]
+  },
+  "market_research": {
+    "total_addressable_market": "£1.2B",
+    "growth_rate": "18%",
+    "customer_survey": {
+      "sample_size": 1500,
+      "price_sensitivity": {
+        "optimal_price": "£299",
+        "price_ceiling": "£399",
+        "price_floor": "£199"
+      },
+      "feature_importance": {
+        "energy_management": "85%",
+        "ai_assistant": "65%",
+        "security": "90%"
+      }
+    },
+    "competitor_analysis": [
+      {
+        "name": "SmartLife Hub",
+        "market_share": "35%",
+        "price": "£349",
+        "rating": "4.2/5"
+      },
+      {
+        "name": "HomeIQ",
+        "market_share": "25%",
+        "price": "£299",
+        "rating": "3.8/5"
+      }
+    ]
+  },
+  "launch_scenarios": [
+    {
+      "type": "Full Launch",
+      "cost": "£1.5M",
+      "timeline": "3 months",
+      "risk_level": "High"
+    },
+    {
+      "type": "Phased Launch",
+      "cost": "£900,000",
+      "timeline": "6 months",
+      "risk_level": "Medium"
+    },
+    {
+      "type": "Soft Launch",
+      "cost": "£500,000",
+      "timeline": "2 months",
+      "risk_level": "Low"
+    }
+  ]
+}
 
-Decision Tree Structure:
-[Market Research]
-├── Positive Market Response
-│   ├── High Competition
-│   │   ├── Differentiation Strategy
-│   │   │   ├── Success: Premium Pricing
-│   │   │   └── Failure: Revise USP
-│   │   └── Cost Leadership Strategy
-│   │       ├── Success: Market Share Growth
-│   │       └── Failure: Resource Drain
-│   └── Low Competition
-│       ├── Rapid Expansion
-│       │   ├── Success: Market Dominance
-│       │   └── Failure: Over-extension
-│       └── Gradual Growth
-│           ├── Success: Stable Position
-│           └── Failure: Missed Opportunity
-└── Negative Market Response
-    ├── Pivot Product
-    │   ├── Success: New Market Fit
-    │   └── Failure: Resource Waste
-    └── Abandon Project
-        ├── Success: Resource Preservation
-        └── Failure: Sunk Costs
+Basic Prompt:
+"Decide how to launch the product."
 
-Decision Points and Criteria:
-1. Market Research Results
-   - Positive: >70% favourable feedback
-   - Negative: <30% favourable feedback
+Enhanced Prompt:
+"Develop a comprehensive product launch decision analysis using the provided data:
 
-2. Competition Level
-   - High: >5 major competitors
-   - Low: <2 major competitors
+1. Market Opportunity Assessment
+   - Market size analysis
+   - Growth potential
+   - Competition mapping
+   - Customer demand validation
 
-3. Strategy Selection
-   - Based on resource availability
-   - Consider time constraints
-```
+2. Product Readiness Evaluation
+   - Feature completeness
+   - Competitive advantage
+   - Technical stability
+   - Support readiness
 
-### Department-Specific Applications
+3. Launch Strategy Analysis
+   - Scenario comparison
+   - Resource requirements
+   - Timeline feasibility
+   - Risk assessment
 
-#### HR Department Example
-```
-Task: Develop a hiring decision process
+4. Financial Modelling
+   - Cost-benefit analysis
+   - ROI projections
+   - Break-even analysis
+   - Cash flow impact
 
-Step 1: Requirements Analysis
-- Department needs assessment
-- Budget considerations
-- Skills gap analysis
-- Timeline requirements
+5. Risk Mitigation Planning
+   - Technical risks
+   - Market risks
+   - Operational risks
+   - Competitive risks
 
-Step 2: Recruitment Strategy
-Decision Tree:
-[Urgent Need]
-├── Internal Recruitment
-│   ├── Available Talent
-│   │   └── Internal Promotion
-│   └── No Suitable Candidates
-│       └── External Recruitment
-└── External Recruitment
-    ├── Agency Hiring
-    │   ├── Quick Results
-    │   └── Higher Costs
-    └── Direct Hiring
-        ├── Longer Timeline
-        └── Cost Effective
+Required Outputs:
+1. Strategy Recommendation
+2. Implementation Plan
+3. Risk Management Plan
+4. Success Metrics
+5. Contingency Plans
 
-Step 3: Implementation
-- Process documentation
-- Stakeholder communication
-- Timeline management
-- Success metrics
-```
+Decision Framework:
+- Market timing
+- Resource availability
+- Risk tolerance
+- Revenue potential
+- Strategic alignment"
 
-#### Finance Department Example
-```
-Task: Investment decision-making process
-
-Step 1: Investment Analysis
-Criteria Matrix:
-| Factor          | Weight | Score | Weighted |
-|-----------------|--------|-------|----------|
-| ROI Potential   | 0.30   | 4     | 1.20     |
-| Risk Level      | 0.25   | 3     | 0.75     |
-| Market Trends   | 0.20   | 5     | 1.00     |
-| Resource Req.   | 0.15   | 4     | 0.60     |
-| Timeline        | 0.10   | 3     | 0.30     |
-| Total           | 1.00   |       | 3.85     |
-
-Step 2: Decision Tree
-[Investment Opportunity]
-├── High Score (>4.0)
-│   ├── Full Investment
-│   └── Phased Investment
-└── Medium Score (3.0-4.0)
-    ├── Pilot Investment
-    └── Further Research
-```
-
-#### IT Department Example
-```
-Task: System upgrade decision process
-
-Step 1: Impact Assessment
-- Current system analysis
-- User requirements
-- Resource implications
-- Security considerations
-
-Step 2: Implementation Strategy
-Decision Matrix:
-1. Immediate Upgrade
-   Criteria:
-   - Critical security issues
-   - System performance <60%
-   - High user impact
-
-2. Phased Upgrade
-   Criteria:
-   - Moderate issues
-   - System performance 60-80%
-   - Medium user impact
-
-3. Scheduled Maintenance
-   Criteria:
-   - Minor issues
-   - System performance >80%
-   - Low user impact
-
-Step 3: Execution Plan
-[System Status]
-├── Critical Issues
-│   ├── Emergency Upgrade
-│   │   ├── Full System
-│   │   └── Affected Modules
-│   └── Temporary Fix
-└── Non-Critical Issues
-    ├── Planned Upgrade
-    └── Regular Maintenance
+Why it works better: Provides structured decision-making framework with clear evaluation criteria and risk assessment.
 ```
 
-## 4. Practice Exercises
+## Practice Exercises
 
-### Exercise 1: Strategic Decision Making
+### Exercise 1: Business Process Optimization
 ```
-Scenario: Automating Customer Service Operations
+Test Data:
+process_analysis.json:
+{
+  "process": {
+    "name": "Customer Support Workflow",
+    "current_metrics": {
+      "average_resolution_time": "4.5 hours",
+      "first_response_time": "45 minutes",
+      "customer_satisfaction": "3.8/5",
+      "resolution_rate": "85%",
+      "escalation_rate": "15%"
+    },
+    "bottlenecks": [
+      {
+        "stage": "Initial Triage",
+        "delay": "25 minutes",
+        "cause": "Manual Classification"
+      },
+      {
+        "stage": "Specialist Assignment",
+        "delay": "35 minutes",
+        "cause": "Resource Availability"
+      }
+    ],
+    "resources": {
+      "staff": 45,
+      "tools": [
+        "Ticketing System",
+        "Knowledge Base",
+        "Chat Support"
+      ],
+      "cost_per_ticket": "£12.50"
+    }
+  }
+}
 
-Step 1: Current State Analysis
-Prompt: "Analyse current customer service operations:
-- Process efficiency
-- Cost analysis
-- Customer satisfaction
-- Staff utilisation"
+Basic Prompt:
+"Improve the customer support process."
 
-Step 2: Automation Opportunity Assessment
-Prompt: "Identify automation opportunities:
-- Which processes can be automated?
-- What are the technical requirements?
-- What are the cost implications?
-- What are the expected benefits?"
+Enhanced Prompt:
+"Analyse and optimize the customer support workflow:
 
-Step 3: Implementation Strategy
-Prompt: "Develop an implementation approach:
-- Phasing strategy
-- Resource requirements
-- Timeline
-- Success metrics"
+1. Process Analysis
+   - Performance metrics review
+   - Bottleneck identification
+   - Resource utilization
+   - Cost analysis
 
-Step 4: Risk and Mitigation
-Prompt: "Identify and address risks:
-- Technical risks
-- Operational risks
-- Customer experience risks
-- Staff impact risks"
+2. Improvement Opportunities
+   - Automation potential
+   - Resource optimization
+   - Workflow streamlining
+   - Technology enhancement
+
+3. Solution Design
+   - Process modifications
+   - Technology solutions
+   - Resource allocation
+   - Implementation approach
+
+Required Deliverables:
+1. Current State Analysis
+2. Improvement Recommendations
+3. Implementation Plan
+4. ROI Projection
+5. Success Metrics"
 ```
 
-### Exercise 2: Quality Improvement Process
-```
-Task: Improve product quality control process
-
-Self-Correction Framework:
-1. Initial Assessment
-- Current process review
-- Performance metrics
-- Issue identification
-- Impact analysis
-
-2. Improvement Identification
-- Process gaps
-- Efficiency opportunities
-- Technology enhancement
-- Staff training needs
-
-3. Solution Development
-- Process improvements
-- Implementation requirements
-- Resource allocation
-- Timeline development
-
-4. Validation and Verification
-- Success criteria
-- Testing procedures
-- Performance metrics
-- Feedback mechanisms
-```
-
-## Tips for Multi-step Reasoning
-- Break down complex problems
-- Document reasoning at each step
-- Validate assumptions
-- Consider multiple perspectives
-- Include feedback loops
+## Tips for Reasoning
+- Use structured analysis
+- Document assumptions
+- Consider alternatives
+- Validate conclusions
 - Plan for contingencies
 
-## Common Mistakes to Avoid
-- Skipping steps in analysis
-- Insufficient validation
-- Overlooking dependencies
-- Ignoring feedback
-- Poor documentation
-- Rushed implementation
-- Incomplete risk assessment 
+## Common Reasoning Mistakes
+- Incomplete analysis
+- Biased assumptions
+- Missing data points
+- Poor validation
+- Unclear criteria 
