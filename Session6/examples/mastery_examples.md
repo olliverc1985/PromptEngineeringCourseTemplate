@@ -279,7 +279,18 @@ transformation_project.json:
     "current_state": {
       "digital_maturity": "Medium",
       "legacy_systems": 4,
-      "annual_tech_budget": "£5M"
+      "annual_tech_budget": "£5M",
+      "compliance_status": {
+        "gdpr_readiness": "Partial",
+        "fca_requirements": "Compliant",
+        "cyber_essentials": "Certified",
+        "iso_27001": "In Progress"
+      },
+      "technical_debt": {
+        "legacy_applications": 12,
+        "outdated_integrations": 8,
+        "manual_processes": 15
+      }
     }
   },
   "objectives": {
@@ -289,39 +300,142 @@ transformation_project.json:
       "Data analytics capability"
     ],
     "timeline": "18 months",
-    "budget": "£8M"
+    "budget": "£8M",
+    "compliance_targets": {
+      "gdpr": "Full Compliance",
+      "fca_reporting": "Automated",
+      "cyber_security": "Advanced",
+      "data_protection": "Enhanced"
+    },
+    "success_metrics": {
+      "process_automation": "60% reduction in manual tasks",
+      "cloud_adoption": "80% workload migration",
+      "cost_efficiency": "25% operational cost reduction",
+      "security_posture": "SOC 2 Type II Certification"
+    }
   }
 }
 
 Task:
 Develop a complete digital transformation strategy addressing:
 1. Current State Assessment
+   - Technical infrastructure review
+   - Compliance gap analysis
+   - Process efficiency evaluation
+   - Risk assessment
+
 2. Future State Design
+   - Cloud architecture blueprint
+   - Automation framework
+   - Analytics platform design
+   - Security enhancement plan
+
 3. Transformation Roadmap
+   - Phase-wise implementation
+   - Resource allocation
+   - Timeline planning
+   - Risk mitigation
+
 4. Success Metrics Framework
+   - KPI definition
+   - Measurement methodology
+   - Reporting structure
+   - Adjustment mechanisms
 
 Deliverables:
 1. Transformation Strategy Document
+   - Executive summary
+   - Detailed analysis
+   - Implementation approach
+   - Resource requirements
+
 2. Implementation Plan
+   - Project phases
+   - Timeline
+   - Dependencies
+   - Critical path
+
 3. Risk Register
+   - Technical risks
+   - Operational risks
+   - Compliance risks
+   - Mitigation strategies
+
 4. ROI Analysis
-5. Change Management Plan"
+   - Cost breakdown
+   - Benefit quantification
+   - Payback period
+   - Sensitivity analysis
+
+5. Change Management Plan
+   - Stakeholder analysis
+   - Communication strategy
+   - Training programme
+   - Support framework"
 ```
 
 ## Tips for Mastery
-- Use structured frameworks
-- Implement validation checks
-- Document assumptions
-- Plan for contingencies
-- Monitor and adjust
-- Maintain compliance
-- Consider scalability
+- Use structured frameworks (see Example 1's decision framework)
+- Implement validation checks (refer to Example 2's success criteria)
+- Document assumptions (demonstrated in all test data sections)
+- Plan for contingencies (see transformation project risk register)
+- Monitor and adjust (refer to performance monitoring sections)
+- Maintain compliance (see UK regulatory requirements throughout)
+- Consider scalability (demonstrated in system integration example)
+- Cross-reference related examples for comprehensive solutions
+- Implement error handling at each stage:
+  * Input validation
+  * Process monitoring
+  * Exception handling
+  * Recovery procedures
+  * Audit logging
+  * User notification
+  * System resilience
 
 ## Common Pitfalls
-- Incomplete requirements
-- Inadequate testing
-- Poor documentation
-- Missed dependencies
-- Security oversights
-- Performance issues
-- Compliance gaps
+- Incomplete requirements (see comprehensive test data structure)
+- Inadequate testing (refer to validation frameworks)
+- Poor documentation (see detailed deliverables sections)
+- Missed dependencies (check integration requirements)
+- Security oversights (review compliance standards)
+- Performance issues (monitor success criteria)
+- Compliance gaps (ensure UK regulatory alignment)
+- Error handling weaknesses:
+  * Missing validation steps
+  * Incomplete error logging
+  * Poor recovery procedures
+  * Inadequate user feedback
+  * Limited monitoring
+  * Weak fallback options
+
+## Cross-Reference Guide
+1. For Product Launch (Example 1):
+   - See transformation project for change management
+   - Refer to system integration for technical implementation
+   - Review compliance requirements across examples
+
+2. For System Integration (Example 2):
+   - Link with product launch for business context
+   - Connect to transformation project for strategic alignment
+   - Follow common security and compliance patterns
+
+3. For Digital Transformation:
+   - Combine learnings from both previous examples
+   - Apply comprehensive success metrics
+   - Implement full compliance framework
+
+## Additional Resources
+- Previous Sessions:
+  * Session 1-2: Foundation concepts
+  * Session 3-4: Advanced techniques
+  * Session 5: Complex reasoning
+- UK Compliance Framework:
+  * GDPR Requirements
+  * FCA Guidelines
+  * Cyber Essentials
+  * ISO Standards
+- Best Practices:
+  * Error Handling
+  * Performance Optimisation
+  * Security Implementation
+  * Change Management
