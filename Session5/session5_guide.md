@@ -4,49 +4,146 @@
 
 ### Learning Objectives
 By the end of this session, participants will:
-- Master multi-step reasoning techniques
-- Implement self-correction mechanisms
-- Develop strategic problem-solving skills
-- Create layered prompts for complex tasks
+- Master complex problem decomposition
+- Implement comprehensive reasoning strategies
+- Develop effective self-correction mechanisms
+- Create robust solution validation frameworks
 
 ### Session Outline
 
-#### 1. Multi-step Reasoning Fundamentals (10 minutes)
-- Breaking down complex problems
-- Sequential thinking patterns
-- Logic flow development
-- Decision tree creation
+#### 1. Multi-step Reasoning (10 minutes)
+1. Problem Decomposition
+   - Breaking down complex issues
+   - Identifying dependencies
+   - Creating solution frameworks
+   - Establishing validation points
+
+2. Strategic Analysis
+   - Market assessment
+   - Competition evaluation
+   - Resource planning
+   - Risk management
+
+3. Implementation Planning
+   - Phase definition
+   - Resource allocation
+   - Timeline development
+   - Success metrics
 
 #### 2. Self-Correction Mechanisms (10 minutes)
-- Error detection strategies
-- Quality assessment methods
-- Improvement cycles
-- Validation techniques
+1. Quality Assessment
+   - Output validation
+   - Accuracy verification
+   - Completeness checking
+   - Consistency evaluation
+
+2. Error Detection
+   - Pattern recognition
+   - Anomaly identification
+   - Impact assessment
+   - Resolution planning
+
+3. Improvement Cycles
+   - Feedback integration
+   - Solution refinement
+   - Performance optimization
+   - Documentation updates
 
 #### 3. Strategic Problem-Solving (10 minutes)
-- Department-specific applications
-- Complex scenario handling
-- Solution optimisation
-- Implementation planning
+1. Business Strategy
+   - Market expansion analysis
+   - Product launch planning
+   - Resource optimization
+   - Performance monitoring
+
+2. Technical Solutions
+   - System integration
+   - Performance optimization
+   - Error resolution
+   - Quality assurance
+
+3. Process Improvement
+   - Workflow optimization
+   - Efficiency enhancement
+   - Cost reduction
+   - Quality improvement
 
 #### 4. Advanced Applications (15 minutes)
-- Real-world case studies
-- Interactive problem-solving
-- Group exercises
-- Solution refinement
+1. Case Studies
+   - Business scenarios
+   - Technical challenges
+   - Process optimization
+   - Change management
+
+2. Solution Development
+   - Strategy creation
+   - Implementation planning
+   - Risk mitigation
+   - Success validation
+
+3. Performance Optimization
+   - Efficiency analysis
+   - Resource utilization
+   - Cost management
+   - Quality enhancement
 
 ### Key Concepts
 - Problem decomposition
-- Logical progression
-- Self-assessment
-- Iterative improvement
-- Quality validation
+- Strategic analysis
+- Solution validation
+- Quality assurance
+- Performance optimization
+- Risk management
+
+### Practical Examples
+See the `examples` folder for detailed, copy-paste ready prompts that demonstrate each concept.
+Each example includes:
+- Test data in JSON format
+- Basic prompt version
+- Enhanced prompt version
+- Implementation notes
+- Success criteria
 
 ### Advanced Applications
-- Business strategy development
-- Technical troubleshooting
-- Project planning
-- Risk assessment
+1. Business Strategy
+   - Market analysis
+   - Product strategy
+   - Resource planning
+   - Performance monitoring
+
+2. Technical Solutions
+   - System integration
+   - Error resolution
+   - Performance tuning
+   - Quality assurance
+
+3. Process Optimization
+   - Workflow enhancement
+   - Efficiency improvement
+   - Cost reduction
+   - Quality management
 
 ### Homework
-Design a complex business scenario that requires multi-step reasoning and self-correction mechanisms, then create a detailed solution approach. 
+1. Develop a comprehensive business strategy that includes:
+   - Market analysis
+   - Resource planning
+   - Risk assessment
+   - Implementation timeline
+
+2. Create a technical solution framework for:
+   - System integration
+   - Performance optimization
+   - Error handling
+   - Quality assurance
+
+3. Design a process improvement plan with:
+   - Workflow analysis
+   - Efficiency metrics
+   - Cost reduction
+   - Quality enhancement
+
+Document your approach including:
+- Test data used
+- Prompt variations
+- Success metrics
+- Improvement iterations 
