@@ -10,15 +10,15 @@ Each example in this course follows this structure:
    - Target audience (Business professionals)
 
 2. Example Structure
+   - Test data
    - Basic version
    - Enhanced version
    - Why it works better
-   - Implementation notes
 
 3. Practice Format
-   - Beginner level task
-   - Intermediate level task
-   - Advanced level task
+   - Test scenarios
+   - Basic approach
+   - Enhanced approach
    - Solution guidelines
 
 4. Validation Criteria
@@ -62,189 +62,249 @@ At the end of each section, verify:
 
 ## 1. Tone Variation Examples
 
-### Example: Announcing a Company Policy Change
+### Example 1: Company Policy Change
 ```
-Context: Communicating hybrid work policy across different levels
-Prerequisites: Understanding of corporate communication
-Target Audience: Multiple organisational levels
+Test Data:
+company_policy.json:
+{
+  "policy_type": "Hybrid Work",
+  "effective_date": "2024-03-01",
+  "impact": {
+    "departments": ["Sales", "Marketing", "IT", "HR"],
+    "employees_affected": 250,
+    "locations": ["London", "Manchester", "Birmingham"],
+    "current_setup": "Full office-based",
+    "key_changes": [
+      "3 days office / 2 days remote",
+      "Core hours 10am-3pm",
+      "Team collaboration days",
+      "Equipment provision"
+    ],
+    "business_metrics": {
+      "expected_cost_savings": "£500,000/year",
+      "productivity_forecast": "+15%",
+      "employee_satisfaction_target": "85%"
+    }
+  }
+}
 
-Basic Version:
-"We're changing to hybrid work."
+Basic Prompt:
+"Write an announcement about changing to hybrid work."
 
-Enhanced Version (Executive Level):
-Task: Write a brief announcement about the implementation of a new hybrid work policy
-Considerations:
-- Strategic benefits
-- Business impact
-- Implementation timeline
-- Success metrics
+Enhanced Prompt:
+"Create three versions of the hybrid work policy announcement using the provided data:
 
-Why it works better:
-- Maintains executive perspective
-- Focuses on strategic elements
-- Addresses stakeholder concerns
-- Provides clear metrics
+1. Executive Version (Board and C-level):
+   - Focus on business impact and ROI
+   - Include financial projections
+   - Reference industry trends
+   - Outline success metrics
 
-Implementation Notes:
-- Use data-driven justification
-- Include cost-benefit analysis
-- Reference industry trends
-- Provide clear next steps
-```
+2. Management Version (Team Leaders):
+   - Implementation timeline
+   - Team coordination guidelines
+   - Resource allocation
+   - Performance monitoring
 
-### Base Scenario: Announcing a Company Policy Change
-Let's see how to adjust the tone for different audiences while maintaining the same core message.
+3. Employee Version (General Staff):
+   - Practical day-to-day changes
+   - Clear expectations
+   - Support resources
+   - Next steps
 
-#### Executive Tone
-```
-Context: You are the Chief Operations Officer.
-Task: Write a brief announcement about the implementation of a new hybrid work policy, focusing on strategic benefits and business impact.
-Tone: Executive, strategic, business-focused
-```
+For each version, include:
+- Clear policy overview
+- Specific dates and deadlines
+- Contact points for questions
+- Required actions"
 
-#### HR Professional Tone
-```
-Context: You are the HR Director.
-Task: Write an announcement about the new hybrid work policy, emphasising employee wellbeing and policy details.
-Tone: Professional, supportive, detailed
-```
-
-#### Team Leader Tone
-```
-Context: You are a department manager.
-Task: Write a team email about the new hybrid work policy, focusing on practical implementation and team impact.
-Tone: Collaborative, practical, direct
-```
-
-## 2. Emotional vs Neutral Language Examples
-
-### Customer Feedback Response
-```
-Neutral Version:
-"We have received your feedback about our service. We are reviewing the situation and will make necessary adjustments to our processes."
-
-Empathetic Version:
-"Thank you for taking the time to share your experience with us. We understand your frustration with the service delay, and we genuinely appreciate your patience. We're actively working to improve our processes."
+Why it works better: Provides tailored messaging for each audience while maintaining consistency in core information.
 ```
 
-### Project Delay Announcement
+### Example 2: Customer Service Response
 ```
-Neutral Version:
-"The project deadline has been extended to 15th March due to technical requirements."
+Test Data:
+customer_complaint.json:
+{
+  "customer": {
+    "name": "Sarah Thompson",
+    "type": "Premium Member",
+    "loyalty_years": 3,
+    "purchase_history": {
+      "total_orders": 47,
+      "average_value": "£125",
+      "last_order": "2024-01-15"
+    }
+  },
+  "complaint": {
+    "category": "Delivery Delay",
+    "product": "Limited Edition Tea Set",
+    "order_date": "2024-01-10",
+    "expected_delivery": "2024-01-12",
+    "actual_delivery": "2024-01-18",
+    "special_circumstance": "Birthday Gift",
+    "previous_complaints": 0
+  }
+}
 
-Emotional Intelligence Version:
-"We understand the impact that project timelines have on your work. While we need to extend the deadline to 15th March to ensure quality, we're here to support you through this adjustment and welcome your questions."
-```
+Basic Prompt:
+"Write a response to the customer complaint."
 
-## 3. Cultural Considerations in Practice
+Enhanced Prompt:
+"Craft a personalised response to our premium customer's delivery delay complaint:
 
-### International Team Communication
-```
-Western Context:
-"Please provide direct feedback on the proposal by Friday."
+Key Requirements:
+1. Acknowledge their loyalty status and history
+2. Express genuine understanding of the birthday gift context
+3. Explain the delay with transparency
+4. Offer specific compensation
+5. Provide future assurance
 
-Asian Context (Considering indirect communication preferences):
-"We would value your thoughts on the proposal. When convenient for you, perhaps before Friday, could you share any insights that might help enhance the document?"
-```
+Format:
+- Personalised greeting
+- Empathetic acknowledgment
+- Clear explanation
+- Concrete solution
+- Goodwill gesture
+- Future prevention
+- Personal sign-off
 
-### Meeting Scheduling
-```
-Standard Version:
-"Let's schedule the meeting for 9 AM sharp. Please be on time."
+Tone Guidelines:
+- Professional yet warm
+- Genuinely apologetic
+- Solution-focused
+- Premium service level
+- Relationship-building"
 
-Culturally Aware Version:
-"I suggest we meet at 9 AM UK time (please see time zone converter link). We understand this might fall during different parts of the day for team members globally - please let us know if we need to find an alternative time."
-```
-
-## 4. Expertise Level Adaptation
-
-### Technical Update Announcement
-```
-Expert Level (Development Team):
-"We're implementing OAuth 2.0 with JWT tokens for authentication, replacing the legacy basic auth system. Update your API clients to include Bearer tokens in request headers."
-
-Intermediate Level (IT Support):
-"We're upgrading our authentication system to use secure tokens instead of username/password combinations. You'll need to update how you connect to the system using the new security certificates provided."
-
-Basic Level (General Staff):
-"We're making our login system more secure. The only change you'll notice is a new login screen where you'll use your company email to sign in. No action is needed from you until the switch next week."
-```
-
-## 5. Content Specificity Examples
-
-### Technical vs Non-Technical Communication
-
-#### Technical Version
-```
-Context: Writing for the IT department
-Task: Explain the implementation of new security protocols, including technical specifications and system requirements.
-Requirements: Include technical terminology, specific protocols, and implementation steps
-```
-
-#### Non-Technical Version
-```
-Context: Writing for general staff
-Task: Explain the same security protocols in user-friendly terms, focusing on daily impact and user actions.
-Requirements: Use analogies, simple explanations, and practical examples
+Why it works better: Combines empathy with specific actions while acknowledging customer value.
 ```
 
-## 6. Department-Specific Adaptations
+### Example 3: Cross-Cultural Communication
+```
+Test Data:
+international_project.json:
+{
+  "project": {
+    "name": "Global E-commerce Platform Launch",
+    "teams": {
+      "UK": {
+        "location": "London",
+        "timezone": "GMT",
+        "work_style": "Direct communication",
+        "team_size": 8
+      },
+      "Japan": {
+        "location": "Tokyo",
+        "timezone": "JST (GMT+9)",
+        "work_style": "Consensus-based",
+        "team_size": 6
+      },
+      "UAE": {
+        "location": "Dubai",
+        "timezone": "GST (GMT+4)",
+        "work_style": "Relationship-focused",
+        "team_size": 4
+      }
+    },
+    "deadlines": {
+      "feedback_needed_by": "2024-02-15",
+      "launch_date": "2024-03-01"
+    }
+  }
+}
 
-### Marketing Department
-```
-Context: You are writing content guidelines for the marketing team.
-Audience: Marketing professionals
-Style: Creative, engaging, brand-focused
-Task: Create guidelines for social media content that maintains brand voice while being engaging and trendy.
+Basic Prompt:
+"Request project feedback from international teams."
+
+Enhanced Prompt:
+"Create culturally-adapted feedback requests for our international project teams:
+
+Requirements for each version:
+1. Appropriate greeting time (timezone-aware)
+2. Cultural communication style
+3. Proper formality level
+4. Clear but culturally sensitive deadlines
+5. Acknowledgment of local customs
+
+Format each request with:
+- Local time reference
+- Cultural acknowledgments
+- Clear but adaptable deadlines
+- Feedback format options
+- Response flexibility
+- Appropriate sign-off
+
+Include:
+- UK version (direct style)
+- Japan version (consensus style)
+- UAE version (relationship style)"
+
+Why it works better: Respects cultural nuances while maintaining project requirements.
 ```
 
-### Finance Department
-```
-Context: You are creating a financial report template.
-Audience: Finance professionals and executives
-Style: Precise, analytical, data-driven
-Task: Design a template for monthly financial reports that clearly communicates complex data.
-```
+## Practice Exercises
 
-### Customer Service
+### Exercise 1: Technical Communication
 ```
-Context: You are developing response templates.
-Audience: Customers with various concerns
-Style: Empathetic, solution-oriented, clear
-Task: Create response templates for common customer queries that maintain a consistent, helpful tone.
-```
+Test Data:
+system_update.json:
+{
+  "update": {
+    "type": "Security Protocol Implementation",
+    "technical_details": {
+      "protocol": "OAuth 2.0 + JWT",
+      "changes": [
+        "Bearer token authentication",
+        "Refresh token implementation",
+        "2FA requirement"
+      ],
+      "system_impact": {
+        "downtime": "2 hours",
+        "affected_services": [
+          "API endpoints",
+          "Mobile app",
+          "Admin dashboard"
+        ]
+      }
+    },
+    "user_impact": {
+      "login_changes": true,
+      "password_reset": required,
+      "new_features": ["Single Sign-On", "Remember Me Option"]
+    }
+  }
+}
 
-## 7. Practice Exercises
+Basic Prompt:
+"Write an announcement about the system update."
 
-### Exercise 1: Tone Transformation
-Take this neutral message:
-```
-The office will be closed for maintenance on Saturday.
-```
-Transform it into:
-1. An urgent executive announcement
-2. A friendly team notification
-3. A formal building management notice
+Enhanced Prompt:
+"Create three versions of the system update announcement:
 
-### Exercise 2: Department Adaptation
-Transform this basic request:
-```
-We need feedback on the new project.
-```
-Adapt it for:
-1. The Development team
-2. The Marketing team
-3. The Executive board
+1. Technical Version (Development Team):
+   - Full technical specifications
+   - API documentation changes
+   - Implementation timeline
+   - Testing requirements
 
-### Exercise 3: Audience-Specific Content
-Create three versions of this announcement:
+2. IT Support Version:
+   - Key changes overview
+   - User impact summary
+   - Troubleshooting guides
+   - Support response templates
+
+3. End-User Version:
+   - Simple change explanation
+   - Required actions
+   - Benefits explanation
+   - Support contact details
+
+Each version should include:
+- Timeline
+- Impact assessment
+- Required actions
+- Support resources"
 ```
-We are updating our software system.
-```
-For:
-1. Technical staff
-2. Non-technical users
-3. External clients
 
 ## Tips for Tone Control
 - Use specific tone markers
