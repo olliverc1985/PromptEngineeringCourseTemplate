@@ -59,61 +59,134 @@ At the end of each section, verify:
 ### Example 1: Definition and Importance
 ```
 Basic Prompt: "Write a story"
-Engineered Prompt: "Write a 500-word children's story about friendship, suitable for ages 6-8, featuring talking animals and a moral lesson"
 
-This demonstrates how prompt engineering transforms vague requests into clear, specific instructions.
+Enhanced Prompt: 
+"Write a 500-word children's story with these specifications:
+- Main theme: Friendship and sharing
+- Target age: 6-8 years old
+- Characters: A shy penguin and an outgoing polar bear
+- Setting: Arctic winter
+- Must include: A moral lesson about helping others
+- Tone: Warm and encouraging
+- Format: Include dialogue and descriptive scenes
+- Reading level: Simple vocabulary with occasional challenging words"
+
+Why it works better: The enhanced prompt provides specific parameters that guide the AI to create content matching exact requirements.
+
+Test Data (for practice):
+Here's a sample story opening to improve:
+"Once there was a penguin. He was shy. He met a polar bear. They became friends."
 ```
 
-### Example 2: Role in AI Interactions
+### Example 2: Common Interpretation Patterns
 ```
-Basic Interaction: "Check this text"
-Engineered Interaction: "Review this business proposal for:
-1. Grammar and spelling
-2. Professional tone
-3. Logical flow
-4. Clarity of key points"
+Basic Prompt: "Make this text better"
 
-This shows how proper prompting creates more useful AI interactions.
+Test Data (for improvement):
+Original Business Text:
+"Our company sells food delivery services. We have an app. Customers can order food. 
+Restaurants can join our platform. We make money from commissions. We want to grow bigger."
+
+Enhanced Prompt:
+"Review and improve this business proposal text using:
+1. Professional business language
+2. Specific target market details
+3. Clear value proposition
+4. Market size data
+5. Revenue streams
+
+Format the output as:
+- Executive Summary (2-3 sentences)
+- Market Opportunity (2-3 bullet points)
+- Value Proposition (1-2 sentences)
+- Business Model (2-3 bullet points)
+- Target Market (specific demographics)"
+
+Why it works better: The enhanced prompt provides clear improvement criteria and desired output structure.
 ```
 
 ### Example 3: Impact on Output Quality
 ```
-Basic Output Request: "Give me ideas for my business"
-Engineered Output Request: "Suggest 5 actionable marketing strategies for a new local coffee shop, considering:
-- A monthly budget of £1,000
-- Target audience of young professionals
-- City centre location
-- Focus on sustainability"
+Basic Prompt: "Give me ideas for my coffee shop"
 
-This illustrates how detailed prompting leads to more valuable and applicable outputs.
+Test Data (business context):
+Coffee Shop Details:
+- Name: Bean Scene
+- Location: Manchester City Centre
+- Current Revenue: £15,000/month
+- Peak Hours: 8-10am, 12-2pm
+- Quiet Periods: 2-5pm
+- Staff: 6 part-time, 2 full-time
+- Current Marketing: Social media only
+- Competition: 5 chain cafes within 500m
+
+Enhanced Prompt:
+"Suggest 5 actionable marketing strategies for my independent coffee shop with these specific parameters:
+- Location: City centre, Manchester
+- Monthly marketing budget: £1,000
+- Target audience: Young professionals (25-35)
+- USP: Speciality coffee and workspace environment
+- Current challenges: High competition, need to increase weekday footfall
+- Business goals: 20% increase in weekday morning customers
+
+For each strategy, please provide:
+1. Implementation steps
+2. Estimated costs
+3. Expected timeline
+4. Success metrics
+5. Potential challenges"
+
+Why it works better: The enhanced prompt provides specific context and requirements for more relevant and actionable suggestions.
 ```
 
 ## 2. Command-Based Prompts
 
 ### Example 1: Basic Command
 ```
-Write a professional email to schedule a team meeting.
-```
+Basic Prompt:
+"Write a professional email to schedule a team meeting."
 
-### Example 2: Detailed Command
-```
-Write a professional email to schedule a team meeting with the following details:
-- Meeting duration: 1 hour
-- Topic: Q2 Planning
-- Suggested times: Tuesday or Wednesday next week
-- Include a note about preparing quarterly reports
+Test Data (meeting context):
+Team Information:
+- Department: Marketing
+- Team Size: 8 people
+- Names: Sarah (Lead), James, Emma, Michael, Lisa, David, Rachel, Tom
+- Available Meeting Rooms: Conference A (capacity 12), Conference B (capacity 8)
+- Working Hours: 9am-5pm GMT
+- Current Projects: Q1 Review, Q2 Planning, Brand Refresh
+
+Enhanced Prompt:
+"Write a professional email to schedule a quarterly planning meeting with these specifications:
+- Recipient: Marketing team (8 people)
+- Purpose: Q2 2024 campaign planning
+- Duration: 2 hours
+- Preferred dates: Next Tuesday or Wednesday
+- Location: Conference Room A or Zoom
+- Pre-meeting requirements: Review Q1 performance metrics
+- Attachments needed: Q1 report and agenda
+- Tone: Professional but friendly
+- Include: Response deadline (24 hours)"
 ```
 
 ## 3. Question-Based Prompts
 
 ### Example 1: Simple Question
 ```
-What are the key components of an effective marketing strategy?
-```
+Test Data (marketing metrics):
+Current Marketing Stats:
+Website Visits: 15,000/month
+Conversion Rate: 2.3%
+Average Order Value: £42
+Customer Acquisition Cost: £18
+Social Media Followers: 5,200
+Email List Size: 3,800
+Engagement Rate: 4.1%
 
-### Example 2: Detailed Question
-```
-What are the key components of an effective marketing strategy for a small local bakery with a budget of £5,000, targeting middle-class families in a suburban area?
+Basic Question:
+"What are the key components of an effective marketing strategy?"
+
+Enhanced Question:
+"Based on our current metrics, what are the top 3 components we should focus on to improve our marketing ROI, considering our £5,000 monthly budget and B2C focus?"
 ```
 
 ## 4. Scenario-Based Prompts
@@ -210,29 +283,57 @@ Why it works: Breaks down the task into logical steps
 
 ## Practice Exercises
 
-### Exercise 1: Transform Commands
-Take this basic command:
+### Exercise 1: Sales Analysis
 ```
-Write a blog post about healthy eating.
+Test Data (sales_data.csv):
+Date,Product,Units,Revenue,Cost
+2024-01-01,Coffee Beans,45,£225.00,£112.50
+2024-01-01,Pastries,78,£195.00,£58.50
+2024-01-02,Tea Selection,32,£128.00,£44.80
+2024-01-02,Coffee Beans,51,£255.00,£127.50
+2024-01-03,Pastries,92,£230.00,£69.00
+
+Basic Prompt:
+"Analyse this sales data"
+
+Your task: Create a detailed analysis prompt that includes:
+- Profitability analysis
+- Product performance comparison
+- Trend identification
+- Recommendations for inventory management
 ```
 
-Transform it into a detailed command with specific parameters.
-
-### Exercise 2: Scenario Building
-Take this simple scenario:
+### Exercise 2: Customer Service
 ```
-Help a customer choose a product.
-```
+Test Data (customer_case.json):
+{
+  "customer": {
+    "type": "Premium subscription",
+    "issue": "Mobile app login failing",
+    "lastContact": "3 days ago",
+    "subscription": {
+      "value": "£49.99/month",
+      "startDate": "2022-03-15",
+      "plan": "Business Pro"
+    },
+    "history": {
+      "previousIssues": [],
+      "supportTickets": 1,
+      "paymentStatus": "Current"
+    },
+    "deviceInfo": {
+      "platform": "iOS 16.5",
+      "appVersion": "2.4.1",
+      "lastLogin": "2024-01-15"
+    }
+  }
+}
 
-Expand it into a detailed scenario with specific context and requirements.
+Basic Prompt:
+"Help resolve the customer's problem"
 
-### Exercise 3: Context Enhancement
-Take this basic context:
+Your task: Create a detailed support prompt incorporating all relevant data points.
 ```
-You are a financial advisor.
-```
-
-Add layers of specific details to create a more focused prompt.
 
 ## Tips for Success
 - Start simple and build complexity
